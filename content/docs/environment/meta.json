@@ -1,0 +1,5 @@
+{
+  "title": "环境搭建",
+  "description": "development environment setup",
+  "pages": ["introduction", "pre-knowledges", "c-cpp", "java", "python"]
+}

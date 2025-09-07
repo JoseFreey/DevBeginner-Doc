@@ -1,0 +1,13 @@
+{
+  "title": "C/C++",
+  "pages": [
+    "overview",
+    "bloodshed-devcpp",
+    "red-panda",
+    "codeblocks",
+    "vs-code",
+    "visual-studio",
+    "sublime-text",
+    "vim-neovim"
+  ]
+}

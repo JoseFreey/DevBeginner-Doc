@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "title": "DevBeginner Doc",
+  "description": "A documentation site for programming beginners.",
+  "pages": [
+    "foreword",
+    "environment",
+    "grammar",
+    "linux"
+  ]
+}
