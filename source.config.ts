@@ -7,8 +7,6 @@ import {
   metaSchema,
 } from 'fumadocs-mdx/config';
 
-// You can customise Zod schemas for frontmatter and `meta.json` here
-// see https://fumadocs.dev/docs/mdx/collections#define-docs
 export const docs = defineDocs({
   docs: {
     schema: frontmatterSchema,
@@ -21,7 +19,7 @@ export const docs = defineDocs({
 export default defineConfig({
   mdxOptions: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: (v) => [rehypeKatex, ...v],
+    rehypePlugins: (v) => [[rehypeKatex, { strict: false }], ...v],
   },
   lastModifiedTime: 'git',
 });
