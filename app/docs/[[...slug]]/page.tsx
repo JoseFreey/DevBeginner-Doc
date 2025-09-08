@@ -18,13 +18,16 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const MDXContent = page.data.body;
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage
+      toc={page.data.toc} full={page.data.full}
+      tableOfContent={{ style: 'clerk' }}
+      lastUpdate={page.data.lastModified ? new Date(page.data.lastModified) : undefined}
+    >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
         <MDXContent
           components={getMDXComponents({
-            // this allows you to link to other pages with relative file paths
             a: createRelativeLink(source, page),
           })}
         />
