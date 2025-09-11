@@ -22,3 +22,10 @@ jobs:
         uses: crate-ci/typos@v1.36.2
         with:
           isolated: true
+          write_changes: true
+
+      - name: Review Git Diff
+        uses: KazukiHayase/review-git-diff-action@v1.0.0
+        with:
+          threshold: 1
+          message: "⚠️ Please check your pull request for spelling corrections made by the Typos action."
