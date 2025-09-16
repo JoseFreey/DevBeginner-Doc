@@ -20,7 +20,7 @@ export default function HomePage() {
           </Link>
           <Link href="https://github.com/FrexCheat/DevBeginner-Doc" target="_blank" rel="noopener noreferrer">
             <button className="hero-button">
-              <Github />GitHub
+              <Github className="size-6" />GitHub
             </button>
           </Link>
         </div>
