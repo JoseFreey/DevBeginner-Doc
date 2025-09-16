@@ -1,0 +1,33 @@
+:root {
+  --base-color: #abcafc;
+  --border-color: #1a58a4;
+}
+
+.hero-button {
+  padding: 1em 1.8em;
+  outline: none;
+  background-color: #4b6596;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.1s;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.hero-button:hover {
+  box-shadow: 0 0 10px var(--base-color), 0 0 25px var(--border-color), 0 0 50px var(--base-color);
+  transition-delay: 0.1s;
+}
+
+.hero-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 8px var(--base-color), 0 0 8px var(--border-color), 0 0 8px var(--base-color);
+  transition: 0.2s;
+}

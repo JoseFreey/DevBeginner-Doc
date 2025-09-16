@@ -1,19 +1,27 @@
+import './home.css';
+import HomeHook from './hook';
+
 import Link from 'next/link';
+import Image from 'next/image';
+
+import HeroButton from '@/components/hero/button';
+import Github from '@/components/hero/github';
 
 export default function HomePage() {
   return (
-    <main className="flex flex-1 flex-col justify-center text-center">
-      <h1 className="mb-4 text-2xl font-bold">Hello World</h1>
-      <p className="text-fd-muted-foreground">
-        You can open{' '}
-        <Link
-          href="/docs"
-          className="text-fd-foreground font-semibold underline"
-        >
-          /docs
-        </Link>{' '}
-        and see the documentation.
-      </p>
-    </main>
+    <HomeHook>
+      <main className="flex flex-1 flex-col gap-8 justify-center items-center">
+        <div className="hero-background absolute inset-0 -z-1"></div>
+        <Image className="hero-logo" src="/logo.svg" alt="Hero Logo" width={350} height={350} />
+        <div className="flex flex-row flex-wrap gap-3 justify-center items-center ml-4 mr-4">
+          <Link href="/docs">
+            <HeroButton>开始阅读</HeroButton>
+          </Link>
+          <Link href="https://github.com/FrexCheat/DevBeginner-Doc" target="_blank" rel="noopener noreferrer">
+            <HeroButton><Github />GitHub</HeroButton>
+          </Link>
+        </div>
+      </main>
+    </HomeHook>
   );
 }
