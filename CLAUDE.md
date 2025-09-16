@@ -12,11 +12,16 @@ DevBeginner-Doc is a comprehensive programming tutorial website built with Next.
 
 ```
 DevBeginner-Doc/
-├── .github/             # github actions workflow files
+├── .github/             # Github actions workflow files
 ├── app/                 # Next.js application files
+├── components/          # Custom UI components which are used in pages or docs
 ├── content/docs/        # Documentation content (MDX files)
+├── hooks/               # React/Next.js tsx files used for hook
 ├── lib/                 # Utility libraries
-└── source.config.ts     # Fumadocs source config
+├── mdx-components.tsx/  # Register components for all mdx files of fumadocs
+├── public/              # Public static sources such as logo and ico of the site
+├── source.config.ts     # Fumadocs source config
+└── styles/              # Styles files of the site
 ```
 
 The repository aims to provide a well-structured learning path for beginners, reducing the learning curve and helping students avoid common pitfalls when starting their programming journey.
@@ -32,8 +37,7 @@ The repository aims to provide a well-structured learning path for beginners, re
 ## Document Content Requirements
 
 - Prohibit Fumadocs MDX syntax errors
-- Prohibit spelling errors
-- Prohibited use of abusive language
+- Prohibit english spelling errors
 - Avoid grammatical errors as much as possible
 - Keep up to date with the latest information as much as possible
 
@@ -41,8 +45,6 @@ The repository aims to provide a well-structured learning path for beginners, re
 
 1. Beginner-Friendly: Written with beginners in mind, with step-by-step instructions
 2. Comprehensive Screenshots: Extensive visual guides for environment setup
-3. Fumadocs Components: Uses components like <Callout>, <Step> to enhance readability
-4. Syntax Highlighting: Code examples with proper syntax highlighting
 5. Programming Contest Knowledge: Information about programming competitions (ICPC, CCPC, etc.)
 
 ## Target Audience
