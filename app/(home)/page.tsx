@@ -1,11 +1,10 @@
-import './home.css';
-import HomeHook from './hook';
+import '@/styles/hero.css';
 
 import Link from 'next/link';
 import Image from 'next/image';
 
-import HeroButton from '@/components/hero/button';
-import Github from '@/components/hero/github';
+import HomeHook from '@/hooks/home';
+import Github from '@/components/icons/github';
 
 export default function HomePage() {
   return (
@@ -15,10 +14,14 @@ export default function HomePage() {
         <Image className="hero-logo" src="/logo.svg" alt="Hero Logo" width={350} height={350} />
         <div className="flex flex-row flex-wrap gap-3 justify-center items-center ml-4 mr-4">
           <Link href="/docs">
-            <HeroButton>开始阅读</HeroButton>
+            <button className="hero-button">
+              开始阅读
+            </button>
           </Link>
           <Link href="https://github.com/FrexCheat/DevBeginner-Doc" target="_blank" rel="noopener noreferrer">
-            <HeroButton><Github />GitHub</HeroButton>
+            <button className="hero-button">
+              <Github />GitHub
+            </button>
           </Link>
         </div>
       </main>

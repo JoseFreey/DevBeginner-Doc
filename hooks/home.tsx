@@ -1,8 +1,9 @@
 "use client"
+
+import gsap from 'gsap';
 import { useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
 
 export default function HomeHook({ children }: { children: React.ReactNode }) {
   const { setTheme, theme } = useTheme();
@@ -22,20 +23,20 @@ export default function HomeHook({ children }: { children: React.ReactNode }) {
 
     timeLine.to(".hero-background", {
       opacity: 0.8,
-      duration: 4,
+      duration: 3,
       ease: "power2.out"
     });
 
     timeLine.to(".hero-logo", {
       scale: 1,
-      duration: 3,
+      duration: 2,
       ease: "power2.out"
     }, "<");
 
     timeLine.to(".hero-button", {
       y: 0,
       opacity: 1,
-      duration: 1,
+      duration: 0.5,
       ease: "power2.out",
       stagger: 0.2
     }, "-=1");
